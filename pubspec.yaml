@@ -1,0 +1,106 @@
+name: SmartSkin
+description: "An AI-powered intelligent acne detection app designed to instantly analyze your facial skin condition."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  cupertino_icons: ^1.0.8
+  flutter:
+    sdk: flutter
+  shimmer: ^3.0.0
+  permission_handler: ^11.0.0
+  image_picker: ^1.0.7
+  google_fonts: ^6.1.0
+  http: ^1.2.1
+  html: ^0.15.0
+  flutter_native_splash: ^2.3.10
+  flutter_launcher_icons: ^0.13.1  # ← tambahkan ini
+
+dev_dependencies:
+
+  flutter_lints: ^5.0.0
+  flutter_native_splash: ^2.3.10
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/img/
+    - assets/img/logo_smartskin.png
+
+
+  uses-material-design: true
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Thin.otf
+          weight: 100
+        - asset: assets/fonts/poppins/Poppins-ExtraLight.otf
+          weight: 200
+        - asset: assets/fonts/poppins/Poppins-Light.otf
+          weight: 300
+        - asset: assets/fonts/poppins/Poppins-Regular.otf
+          weight: 400
+        - asset: assets/fonts/poppins/Poppins-Medium.otf
+          weight: 500
+        - asset: assets/fonts/poppins/Poppins-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/poppins/Poppins-Bold.otf
+          weight: 700
+        - asset: assets/fonts/poppins/Poppins-ExtraBold.otf
+          weight: 800
+        - asset: assets/fonts/poppins/Poppins-Black.otf
+          weight: 900
+
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/inter/Inter-Thin.otf
+          weight: 100
+        - asset: assets/fonts/inter/Inter-ExtraLight.otf
+          weight: 200
+        - asset: assets/fonts/inter/Inter-Light.otf
+          weight: 300
+        - asset: assets/fonts/inter/Inter-Regular.otf
+          weight: 400
+        - asset: assets/fonts/inter/Inter-Medium.otf
+          weight: 500
+        - asset: assets/fonts/inter/Inter-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/inter/Inter-Bold.otf
+          weight: 700
+        - asset: assets/fonts/inter/Inter-ExtraBold.otf
+          weight: 800
+        - asset: assets/fonts/inter/Inter-Black.otf
+          weight: 900
+
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/open-sans/OpenSans-Light.ttf
+          weight: 300
+        - asset: assets/fonts/open-sans/OpenSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/open-sans/OpenSans-Semibold.ttf
+          weight: 600
+        - asset: assets/fonts/open-sans/OpenSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/open-sans/OpenSans-ExtraBold.ttf
+          weight: 800
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/img/logo_smartskin.png
+  fullscreen: true
+  android: true
+  ios: true
+  web: false
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/img/logo_smartskin.png"
