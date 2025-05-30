@@ -584,67 +584,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // Bagian yang menampilkan produk horizontal
-  Widget _buildHorizontalProductSection(
-    BuildContext context,
-    bool isLoading,
-    List<Product> products,
-  ) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _sectionHeaderProduct('Our Products', () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => const ProductsScreen()),
-          );
-        }),
-        SizedBox(
-          height: 170,
-          child:
-              isLoading
-                  ? ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: List.generate(3, (_) => _shimmerProductCard()),
-                  )
-                  : ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: products.length,
-                    itemBuilder: (context, index) {
-                      final product = products[index];
-                      return GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder:
-                                  (_) => DetailProductScreen(product: product),
-                            ),
-                          );
-                        },
-                        child: _horizontalProductCard(
-                          product.name,
-                          product.imageUrl,
-                          isNetwork: true,
-                        ),
-                      );
-                    },
-                  ),
-        ),
-      ],
-    );
-  }
-
-  Widget _sectionHeaderArticles(String title) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16),
-      child: Text(
-        title,
-        style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-
   Widget _articleCard({
     required String title,
     required String image,
